@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffff;
+        }
+
+        header {
+            background-color: #4916d4;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-top: 120px; /* Adjusted to place name below profile picture */
+            font-weight: bold; /* Bold font for profile name */
+            transition: transform 0.3s ease; /* Smooth transition for profile name */
+        }
+
+        .header-content h1:hover {
+            transform: scale(1.1); /* Enlarge profile name on hover */
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Circular profile picture */
+            object-fit: cover;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%); /* Center the profile picture */
+        }
+
+        nav {
+            background-color: #756b6bbd;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+            transition: transform 0.3s ease; /* Smooth transition for topic names */
+        }
+
+        nav ul li:hover {
+            transform: scale(1.1); /* Enlarge topic names on hover */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .section-content {
+            background-color: #ffffff;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+            border: 2px solid #4916d4; /* Dark shadow purple border */
+        }
+
+        .download-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #555;
+        }
+
+        #resume .download-button {
+            background-color: #ffcc00; /* Yellow color for RESUME button */
+        }
+
+        #resume .download-button:hover {
+            background-color: #e6b800;
+        }
+
+        #resume .download-button:nth-child(2) {
+            background-color: #ffcccb; /* Light rose color for DOWNLOAD button */
+        }
+
+        #resume .download-button:nth-child(2):hover {
+            background-color: #e6b8b7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #130e0ed3;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        a[href^="mailto:"], a[href^="tel:"] {
+            color: #4916d4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a[href^="mailto:"]:hover, a[href^="tel:"]:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- Profile Picture -->
+            <img src="https://lh3.googleusercontent.com/fife/ALs6j_G-OKo2s_ufDyY4aEss09bHCFh3-A4UsIK1k-7sa7x_OlwHTKIIa5ZLboSO6MOiJW2k21hNdOMVmG34bMq6eXy2Zdl1Pr163xpppULq3_LpgN58ToCj8jpkjgLptWbXcY33d8owg5B9Byy0HVP3PXs5KjKiDBE7264WibkP2dF67-dOK565hWNd3ypoblMm9-q5AeXhB5JWLzJ4bfMWw7A0Y7K_5J4Nr0NN3S6KukUcdoYspvGmSkXwCFqsXETHPx_tC14NZtbWD9iVb1oB3h4AY-FzjIzcYCEVu_sA06XbziY9SQSA-v9HUBAU8yAzWNWHK3XZLZbkP8IyJ2GSIxX9nFmmUdUMmiQfP7thNp3N2c2loAAmFbmu10-FVNq6YMdVWpmMWNVoSDirNRWBqSlbZFWqNMUNUcV0Bl8KobpHT1zNWYvVTChVN7uOowZR9CpK8r3liBlMF_x_qKk7YAbUg2GsyLQYcIGaYV5E9qqj9-ikJdxnr5DdA3cur8RZQGFoVFTs8tl8EGCZO9_HjN5vVUg7AFtTSz5Tow4RGJ44me9LR1uwwBV8hP5ieLhC3haOFiNp91eOoGP30FWDX3jusFqfd4vyP6cW1BYBxRoMiGFAXRKGI6JuPBlWIh8A3tVrINws5vtZVGztNpQF9EFO-zBr-F8KWaU20ryRVe8lDTI6oKWDgoWLF7upo1bFuZ2SFKezLtclN3PEmusijO9uDTNFWHu-xmYyTXQLe01UZ4VFgEWoAyWz1eGOz01ZhvZj25a3S-BEpI0IJbCvuEE_cXHcNAt1aYFvxdV3IRKqMjwG2zvVGMg1WfnmLz5Gr0_JuZqtj3YZihcKllkJmz8L2MNeBab8OHz6_xRGGvRFV6RfagTtwfnWyGCQ5qoGMpXTqnp4Kb2uM-jvArvHcqWpjeESTEHC_oIf3MIZkeOYhaox_PZrIp1fZO7zuaiveoPwVAeEt-FjAmz05PJ3RCXqlz6AjAvuY01Ce1XO2xtFts8qsukM-s2B_-X_iB-F8JsYLCqzF6gqsuMgsuOd3ipgnP5qbeTkAUMQGK-4Lv9TZ_4naSXQWc13oQwQIxWxmKxabJq3zTJ3ktWH7jLPO7K40r9RpvGV4kV49GGRuLszQB_g7dhzee4fNsGKZtpOWr7m8Guyg0wUJB-1dQRSVjSTZMz8lYeYw_CJU7kB1881U6CyErFg_tPH20s7ddvbFLYlAG97q_OFG9_OfFtS4oDuVgcu4kq56rws-V4SVx8ouYByKh8hGcOE4h8h5l9PPzYlwpgbvJMbw4iJJddxZ5Xr65TpUw35SO65KQqFqbRt9Vla8_zh1DStGzUQXTsw-289Lk7fWqeAvThk8KlcRRYDb7Iis-BsIjqQtv1n5cBRoHTCQ2E5hRU4ohGvYDZFqEcsvLgzWFmnv7iHg_cKecr4NA=s2048-w1818-h2048-n-k?authuser=0 " alt="Your Profile Picture" class="profile-picture">
+            <h1>GANESH</h1>
+            <p>🔹🔸🔹🔸🔹🔸🔹🔸🔹🔸🔹</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#education">EDUCATION</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECT</a></li>
+            <li><a href="#resume">RESUME</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>🔹 MY SELF 🔸</h2>
+            <p>Hello! I'm Ganesh, and I am currently pursuing my college education with a strong passion for learning and personal growth. As a dedicated student, I am committed to acquiring knowledge, developing new skills, and exploring opportunities that align with my academic and career aspirations. I thrive in collaborative environments and enjoy tackling challenges with creativity and determination. Outside of academics, I am actively involved in [Outer sports games, reading books], which have helped me build leadership, teamwork, and time-management skills. I am excited to continue my journey, contribute meaningfully to my field of study, and make a positive impact in the world. Let’s connect and grow together!</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>🔹 EDUCATION 🔸</h2>
+            <ul>
+                <li>BCA</li>
+                <li>H.H.The Rajah'S College</li>
+                <li>Pudhukkottai</li>
+                <li>622-001</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>🔹 SKILLS 🔸</h2>
+            <ul>
+                <li>C</li>
+                <li>C++</li>
+                <li>SQL</li>
+                <li>HTML</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Data Analytics</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>🔹 PROJECTS 🔸</h2>
+            <ul>
+                <li><a href="desing.html">App Hacking</a></li>
+                <li><a href="desing.html">AI Music Generator</a></li>
+                <li><a href="desing.html">Website Generator</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content">
+            <center>
+                <!-- Link to view the resume image -->
+                <a href="https://lh3.googleusercontent.com/fife/ALs6j_FOLpyYXu-MRzJt8JJ2Ha9BnkVMzM2fS_p6tNs2o1G3KPpsuniPUEt0oatfk5SAKwUlTSd1uwcjAxFZYbXydr5DRa7sb6HPI170LKdzsRKUe9IhKyVkjuDDAFsjgltSw9Z_t1x75Z984uSo6bfprlxCB36xxIXwbdUArJTMaByeUFLG9OQ32nA-vvWFSSZh-4-vE2yiXaSSBHyN_grRNRIAVQ4wFgIe2saeNfnmHi_uJ4FwqYXeW9Tu10dVrAShfwHQ1aKL7hl7igK5IbXnTqBZz3ecxBY04ny5Htz8A86CrxVLaVM_7KL25X6YWh63s97X1uB9vhCez35d2aEJi6YK53yRZIZ49ZY5FbS3S7Z0Xmlul765M_8ZtEQ1YxTAVHzNQHm2-pV-i01NEGJTQhMDh-WDdquu8GRcXPDjmHMQI7pq1RX-Q6hfRTjA0lrFkAJRscn7Z5mqaXslzgqXvoQtPGJk1ySOCMO7WOuOF76Gs2z9gIi3v1USNRYWa97FKm8QEGubyHRB4VXvi9OpgH1P9c7fZxZEzFsi0kiK5lL1mtY8qpJEVk4V6spWdS7yJtjZ1efWboS2UjOeCJnpKjk4xo_AeWSD6lUJEUmBr2_cBSdjUlzwzumlrzWxjVXmJppdDFY8YhHSzNIj88DTDQNlFY_kE4Z9tiBx29K_JcLgwO0jgi1LcY09kotyI3lg3eLkf_RIprSDuiAiLwTU1I0wdcULJSog2h-2IUkzDHeP_nhzT253eaVR_ZYnEI9VDcIuz4UzSeFAL-m8XFlzBW_hX9vkpAKyMjwjys-wCBdg7Tv2gLFCYUTONz9GpjDPTPvOdCvPpN0I4ay1hpJ1rqMkPxvV0O9C_CCcIHoAiaP8dlKjZ1wgSL9D94wWD1xK-kUDxyfwJB6sjtKtwr9tis_XaFxjsnRnXhwXQo5LXflD2zy7DgD0q39zfArzg5qf4HavzkwJ63vVzfskmccav80sg4mK1-qf0bSJTJwoclnPde8lQd2upUQ2-oAqPSrSOGaAD6y0X_TsQ03KiF1y956Hx-z2Jf8bq-UPQZBtq-OUvT764_hEynyBBl5DrtMAuuFOfecMFwwuwAz6vpDLecXnS2BL0tIDOyT1DTsK1VI8ALfRbXUlo1qKFpzDDNWrd7dQNKkpu2RHrSFAenbnX-l634YEsA_3Dyz1R19fwVca5KjaDlR4D3sBdWyJXAxb3m7Urysek9Vik13yA_7IHLD8x9Oe6fJR20YO1cd5nwCVtNrp_SYJsYZMTQ2SMO9IsIAJxroWSy4YiBDMerK8lfRkG1IBzmKblk0aJYUEKEkh1ifcHq59QU60EVc0I898RHD6dJ-YHT8b2DRNcMJbi6uyFj-2YJGhDhALmJCcVmavh5K33YyZ7z3G8hgnJXr1doB7_A_5pVRfhmn5mDr1lFTYFA=s1600-w1131-h1600-n-k?authuser=0 " target="_blank" class="download-button">VIEW RESUME</a>
+                <br>
+                <!-- Link to download the resume image -->
+                <a href="https://lh3.googleusercontent.com/fife/ALs6j_FOLpyYXu-MRzJt8JJ2Ha9BnkVMzM2fS_p6tNs2o1G3KPpsuniPUEt0oatfk5SAKwUlTSd1uwcjAxFZYbXydr5DRa7sb6HPI170LKdzsRKUe9IhKyVkjuDDAFsjgltSw9Z_t1x75Z984uSo6bfprlxCB36xxIXwbdUArJTMaByeUFLG9OQ32nA-vvWFSSZh-4-vE2yiXaSSBHyN_grRNRIAVQ4wFgIe2saeNfnmHi_uJ4FwqYXeW9Tu10dVrAShfwHQ1aKL7hl7igK5IbXnTqBZz3ecxBY04ny5Htz8A86CrxVLaVM_7KL25X6YWh63s97X1uB9vhCez35d2aEJi6YK53yRZIZ49ZY5FbS3S7Z0Xmlul765M_8ZtEQ1YxTAVHzNQHm2-pV-i01NEGJTQhMDh-WDdquu8GRcXPDjmHMQI7pq1RX-Q6hfRTjA0lrFkAJRscn7Z5mqaXslzgqXvoQtPGJk1ySOCMO7WOuOF76Gs2z9gIi3v1USNRYWa97FKm8QEGubyHRB4VXvi9OpgH1P9c7fZxZEzFsi0kiK5lL1mtY8qpJEVk4V6spWdS7yJtjZ1efWboS2UjOeCJnpKjk4xo_AeWSD6lUJEUmBr2_cBSdjUlzwzumlrzWxjVXmJppdDFY8YhHSzNIj88DTDQNlFY_kE4Z9tiBx29K_JcLgwO0jgi1LcY09kotyI3lg3eLkf_RIprSDuiAiLwTU1I0wdcULJSog2h-2IUkzDHeP_nhzT253eaVR_ZYnEI9VDcIuz4UzSeFAL-m8XFlzBW_hX9vkpAKyMjwjys-wCBdg7Tv2gLFCYUTONz9GpjDPTPvOdCvPpN0I4ay1hpJ1rqMkPxvV0O9C_CCcIHoAiaP8dlKjZ1wgSL9D94wWD1xK-kUDxyfwJB6sjtKtwr9tis_XaFxjsnRnXhwXQo5LXflD2zy7DgD0q39zfArzg5qf4HavzkwJ63vVzfskmccav80sg4mK1-qf0bSJTJwoclnPde8lQd2upUQ2-oAqPSrSOGaAD6y0X_TsQ03KiF1y956Hx-z2Jf8bq-UPQZBtq-OUvT764_hEynyBBl5DrtMAuuFOfecMFwwuwAz6vpDLecXnS2BL0tIDOyT1DTsK1VI8ALfRbXUlo1qKFpzDDNWrd7dQNKkpu2RHrSFAenbnX-l634YEsA_3Dyz1R19fwVca5KjaDlR4D3sBdWyJXAxb3m7Urysek9Vik13yA_7IHLD8x9Oe6fJR20YO1cd5nwCVtNrp_SYJsYZMTQ2SMO9IsIAJxroWSy4YiBDMerK8lfRkG1IBzmKblk0aJYUEKEkh1ifcHq59QU60EVc0I898RHD6dJ-YHT8b2DRNcMJbi6uyFj-2YJGhDhALmJCcVmavh5K33YyZ7z3G8hgnJXr1doB7_A_5pVRfhmn5mDr1lFTYFA=s1600-w1131-h1600-n-k?authuser=0" download="GANESH_Resume.jpg" class="download-button">DOWNLOAD RESUME</a>
+            </center>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 GANESH</p>
+        <p>Email: <a href="mailto:g65832527@gmail.com">g65832527@gmail.com</a></p>
+        <p>Mobile: <a href="tel:+919047804855">+91 9047804855</a></p>
+    </footer>
+</body>
+</html>
